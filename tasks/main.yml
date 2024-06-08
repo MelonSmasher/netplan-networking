@@ -8,7 +8,7 @@
     dest: "/etc/netplan/{{ item.interface }}.yaml"
     owner: root
     group: root
-    mode: 0644
+    mode: 0600
   with_items: "{{ interfaces }}"
   notify:
     - apply network interface
